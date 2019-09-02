@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>[Remake] Stockpile Stack Limit - Dev Build</name>
+	<author>Darkside</author>
+    <supportedVersions><li>1.0</li></supportedVersions>
+	<description>
+Allows you to set a limit on the item stack (per cell) of each stockpile. Save friendly!
+给你的储存区添加一个物品堆叠上限（每格），与存档兼容！
+
+Known issue:
+If it exists in a stockpile with limit and the number of stacks is below the limit, you cannot pick up the goods.
+
+----------------------------------------------------------------
+Since Stockpile Stack Limit conflicts with stockpile's priority setting and has not been updated for a long time. It was recreated from the Stockpile Stack Limit.
+Many thanks to Ilyaki and for the MIT license to make it possible to become reality. Some source code comes from Ilyaki's Stockpile Stack Limit.
+This is a development version, and you are welcome to contribute to the github repository as follows:
+GitHub : https://github.com/waingt/StockpileStackLimitRemade
+</description>
+	<url>https://steamcommunity.com/sharedfiles/filedetails/?id=1852323982</url>
+</ModMetaData>
