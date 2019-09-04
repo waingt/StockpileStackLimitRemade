@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>[Remake] Stockpile Stack Limit - Dev Build</name>
+	<name>[Remake] Stockpile Stack Limit</name>
 	<author>Darkside</author>
     <supportedVersions><li>1.0</li></supportedVersions>
 	<description>
@@ -9,10 +9,12 @@ Allows you to set a limit on the item stack (per cell) of each stockpile. Save f
 
 Known issue:
 If it exists in a stockpile with limit and the number of stacks is below the limit, you cannot pick up the goods.
+If a stockpile with limit is full and no other stockpile has spot to place, then trying to drop things causes a stack overflow. (I really can't figure out why, and this situation rarely happens in real gameplaying)
 
 ----------------------------------------------------------------
 Since Stockpile Stack Limit conflicts with stockpile's priority setting and has not been updated for a long time. It was recreated from the Stockpile Stack Limit.
-Many thanks to Ilyaki and for the MIT license to make it possible to become reality. Some source code comes from Ilyaki's Stockpile Stack Limit.
+Many thanks to Ilyaki and for the MIT license to make it possible to become reality. Some source code comes from Ilyaki's Stockpile Stack Limit: 
+https://steamcommunity.com/sharedfiles/filedetails/?id=1651076103
 This is a development version, and you are welcome to contribute to the github repository as follows:
 GitHub : https://github.com/waingt/StockpileStackLimitRemade
 </description>

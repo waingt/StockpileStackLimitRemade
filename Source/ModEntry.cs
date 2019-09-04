@@ -25,6 +25,7 @@ namespace StockpileStackLimit
             var harmony = HarmonyInstance.Create("StockpileStackLimit");
 #if DEBUG
             FileLog.Reset();
+            HarmonyInstance.DEBUG = true;
 #endif
             harmony.PatchAll();
             Message($"Patched");

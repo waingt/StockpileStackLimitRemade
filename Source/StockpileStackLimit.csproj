@@ -73,6 +73,7 @@
     <Compile Include="ModEntry.cs" />
     <Compile Include="StockpileSettingsDrawListener.cs" />
     <Compile Include="StorageSettingsPatch.cs" />
+    <Compile Include="ThingPatch.cs" />
     <Compile Include="ThingUtilityPatch.cs" />
     <Compile Include="TranspilerFactory.cs" />
   </ItemGroup>
