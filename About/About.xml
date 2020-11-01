@@ -1,22 +1,53 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>[Remake] Stockpile Stack Limit</name>
-	<author>Darkside</author>
-    <supportedVersions><li>1.0</li></supportedVersions>
-	<description>
-Allows you to set a limit on the item stack (per cell) of each stockpile. Save friendly!
-给你的储存区添加一个物品堆叠上限（每格），与存档兼容！
+  <name>Stockpile Stack Limit (Continued)</name>
+  <packageId>Mlie.StockpileStackLimit</packageId>
+  <author>sellophane</author>
+  <url>https://github.com/emipa606/StockpileStackLimit</url>
+  <supportedVersions>
+    <li>1.0</li>
+    <li>1.1</li>
+    <li>1.2</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+    <li>Mehni.PickUpAndHaul</li>
+  </loadAfter>
+  <description>[img]https://i.imgur.com/WAEzk68.png[/img]
+Update of sellophanes mod
+https://steamcommunity.com/sharedfiles/filedetails/?id=2015532615
 
-Known issue:
-If it exists in a stockpile with limit and the number of stacks is below the limit, you cannot pick up the goods.
-If a stockpile with limit is full and no other stockpile has spot to place, then trying to drop things causes a stack overflow. (I really can't figure out why, and this situation rarely happens in real gameplaying)
+[img]https://i.imgur.com/7Gzt3Rg.png[/img]
 
-----------------------------------------------------------------
-Since Stockpile Stack Limit conflicts with stockpile's priority setting and has not been updated for a long time. It was recreated from the Stockpile Stack Limit.
-Many thanks to Ilyaki and for the MIT license to make it possible to become reality. Some source code comes from Ilyaki's Stockpile Stack Limit: 
-https://steamcommunity.com/sharedfiles/filedetails/?id=1651076103
-This is a development version, and you are welcome to contribute to the github repository as follows:
-GitHub : https://github.com/waingt/StockpileStackLimitRemade
-</description>
-	<url>https://steamcommunity.com/sharedfiles/filedetails/?id=1852323982</url>
+[table]
+    [tr]
+        [td][url=https://invite.gg/Mlie][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td]
+        [td][url=https://github.com/emipa606/StockpileStackLimit][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
+    [/tr]
+[/table]
+	
+[img]https://i.imgur.com/NOW7jU1.png[/img]
+This is the second iteration of the original mod by ilyaki, modified for better functionality by Darkside, and now updated for 1.1 by myself.
+
+Majority of the credit can go to those two individuals, I just corrected dependencies, and made the necessary .NET updates.
+
+This hasn't been extensively tested however, it ran with no hiccups in my modded 1.1 so I don't foresee too many issues occurring. The only caveat to that is while this will work along side LWM's DeepStorage you should not set stockpile limits for the buildings from that mod.
+
+Additionally, I have not, and will not, test this for 1.0. In theory it should still work but if it doesn't please just use the 1.0 version that is linked below.
+
+The below links point to Darkside's modified version, and the original version of the mod to provide credit where it's due.
+
+Darkside's
+https://steamcommunity.com/sharedfiles/filedetails/?id=1852323982
+
+Original
+https://steamcommunity.com/sharedfiles/filedetails/?id=1651076103</description>
 </ModMetaData>
