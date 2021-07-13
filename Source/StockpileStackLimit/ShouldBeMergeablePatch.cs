@@ -7,9 +7,9 @@ namespace StockpileStackLimit
     [HarmonyPatch(typeof(ListerMergeables), "ShouldBeMergeable")]
     public class ShouldBeMergeablePatch
     {
-        static void Postfix(Thing t, ref bool __result)
+        private static void Postfix(Thing t, ref bool __result)
         {
-            if (__result == true)
+            if (__result)
             {
                 __result = !Limits.HasStackLimit(t) && t.stackCount != Limits.CalculateStackLimit(t);
             }

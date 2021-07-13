@@ -1,5 +1,5 @@
-﻿using RimWorld;
-using HarmonyLib;
+﻿using HarmonyLib;
+using RimWorld;
 
 namespace StockpileStackLimit
 {
@@ -11,14 +11,6 @@ namespace StockpileStackLimit
         public static void Postfix(StorageSettings s)
         {
             clipboardLimit = Limits.GetLimit(s);
-        }
-    }
-    [HarmonyPatch(typeof(StorageSettingsClipboard), "PasteInto")]
-    public static class PasteIntoPatch
-    {
-        public static void Postfix(StorageSettings s)
-        {
-            Limits.SetLimit(s, CopyPatch.clipboardLimit);
         }
     }
 }
