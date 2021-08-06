@@ -28,7 +28,7 @@ namespace StockpileStackLimit
         public static int CalculateStackLimit(Map map, IntVec3 cell)
         {
             var slotgroup = map.haulDestinationManager.SlotGroupAt(cell);
-            if (slotgroup == null) return 0;
+            if (slotgroup == null) return max_limit;
             var limit = GetLimit(slotgroup.Settings);
             return limit >= 0 ? limit : max_limit;
         }

@@ -9,16 +9,19 @@ namespace StockpileStackLimit
     [HarmonyPatch(typeof(ThingFilterUI), "DoThingFilterConfigWindow")]
     internal class ThingFilterUIWindowPatch
     {
-        private static string buffer;
-        private static StorageSettings prev_settings;
+        static string buffer;
+        static StorageSettings prev_settings;
+        static IStoreSettingsParent selected;
 
         public static void Prefix(ref Rect rect)
         {
-            if ((Find.Selector.SingleSelectedObject as IStoreSettingsParent) != null) rect.yMin += 32f;
+            selected = Find.Selector.SingleSelectedObject as IStoreSettingsParent;
+            if (selected != null) rect.yMin += 32f;
         }
         public static void Postfix(ref Rect rect)
         {
-            var settings = (Find.Selector.SingleSelectedObject as IStoreSettingsParent)?.GetStoreSettings();
+            if (selected == null) return;
+            var settings = selected.GetStoreSettings();
             var limit = Limits.GetLimit(settings);
             var new_hasLimit = limit >= 0;
 
