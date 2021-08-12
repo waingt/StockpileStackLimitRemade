@@ -14,8 +14,8 @@ namespace StockpileStackLimit
         static MethodBase TargetMethod()
         {
             var lambda_method = AccessTools.Method("PickUpAndHaul.JobDriver_HaulToInventory+<>c__DisplayClass1_0:<MakeNewToils>b__2");
-            if (lambda_method == null) Main.Error("Cannot find lambda func in JobDriver_HaulToInventory.MakeNewToils");
-            else Main.Debug($"{lambda_method.DeclaringType.FullName}::{lambda_method.Name}");
+            if (lambda_method == null) Utilities.Error("Cannot find lambda func in JobDriver_HaulToInventory.MakeNewToils");
+            else Utilities.Debug($"{lambda_method.DeclaringType.FullName}::{lambda_method.Name}");
             return lambda_method;
         }
         static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
@@ -24,14 +24,14 @@ namespace StockpileStackLimit
             var method2 = SymbolExtensions.GetMethodInfo(() => CountToPickUpUntilOverEncumberedHooker(null, null));
             var found = false;
             instructions.Where(i => i.Calls(method)).Foreach(i => { found = true; i.operand = method2; });
-            if (found) Main.Debug("JobDriver_HaulToInventory.MakeNewToils is patched");
-            else Main.Error("Cannot find <Call MassUtility.CountToPickUpUntilOverEncumbered> in JobDriver_HaulToInventory.MakeNewToils");
+            if (found) Utilities.Debug("JobDriver_HaulToInventory.MakeNewToils is patched");
+            else Utilities.Error("Cannot find <Call MassUtility.CountToPickUpUntilOverEncumbered> in JobDriver_HaulToInventory.MakeNewToils");
             return instructions;
         }
         public static int CountToPickUpUntilOverEncumberedHooker(Pawn pawn, Thing thing)
         {
             int result = MassUtility.CountToPickUpUntilOverEncumbered(pawn, thing);
-            int limit = Limits.CalculateStackLimit(thing.Map, thing.Position);
+            int limit = AdditionalStorageSettings.CalculateStackLimit(thing.Map, thing.Position);
             if (thing.stackCount <= limit) return result;
             int num_can_pick = thing.stackCount - limit;
             if (result > num_can_pick) result = num_can_pick;

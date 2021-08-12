@@ -2,11 +2,11 @@
 <ModSyncNinjaData>
   <ID>e5e7dbce-bf1f-4c7c-afc0-5720f8a9b42c</ID>
   <ModName>Stockpile Stack Limit (Continued)</ModName>
-  <Version>1.0.3.0</Version>
+  <Version>1.3.1</Version>
   <SaveBreaking>False</SaveBreaking>
   <Host name="Github">
-    <Owner>emipa606</Owner>
-    <Project>StockpileStackLimit</Project>
+    <Owner>waingt</Owner>
+    <Project>StockpileStackLimitRemade</Project>
     <AboutDir>About</AboutDir>
     <DownloadFrom>ModSyncMainPage</DownloadFrom>
     <Branch>master</Branch>

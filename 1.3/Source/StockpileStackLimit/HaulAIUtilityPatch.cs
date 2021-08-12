@@ -11,17 +11,16 @@ namespace StockpileStackLimit
     {
         static void Postfix(ref Job __result, Pawn p, Thing t, IntVec3 storeCell, bool fitInStoreCell)
         {
-            var temp = t.stackCount - Limits.CalculateStackLimit(t);
+            var temp = t.stackCount - AdditionalStorageSettings.CalculateStackLimit(t);
             if (temp > 0)
             {
                 __result.count = temp;
                 __result.haulOpportunisticDuplicates = false;
-                Main.Debug($"clamp down hauling job count due to overlimit,job={__result},pawn={p},thing={t},count={__result.count}");
+                Utilities.Debug($"clamp down hauling job count due to overlimit,job={__result},pawn={p},thing={t},count={__result.count}");
                 return;
             }
             var slotGroup = p.Map.haulDestinationManager.SlotGroupAt(storeCell);
-            int limit;
-            if (slotGroup != null && Limits.TryGetLimit(slotGroup, out limit))
+            if (slotGroup != null && AdditionalStorageSettings.TryGetLimit(slotGroup, out int limit))
             {
                 limit = Mathf.Min(limit, t.def.stackLimit);
                 int count = 0;
@@ -40,7 +39,7 @@ namespace StockpileStackLimit
                     }
                 }
                 __result.count = limit;
-                Main.Debug($"destination has a limit,recalculating job count,job={__result},pawn={p},thing={t},count={__result.count}");
+                Utilities.Debug($"destination has a limit,recalculating job count,job={__result},pawn={p},thing={t},count={__result.count}");
             }
         }
     }

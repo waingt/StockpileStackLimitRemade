@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>Stockpile Stack Limit (Continued)</name>
-  <packageId>Mlie.StockpileStackLimit</packageId>
-  <author>sellophane</author>
-  <url>https://github.com/emipa606/StockpileStackLimit</url>
+  <name>Stockpile Limit</name>
+  <packageId>darkside.StockpileLimit</packageId>
+  <author>darkside</author>
+  <url>https://github.com/waingt/StockpileStackLimitRemade</url>
   <supportedVersions>
-    <li>1.0</li>
-    <li>1.1</li>
-    <li>1.2</li>
     <li>1.3</li>
   </supportedVersions>
   <modDependencies>
@@ -21,48 +18,57 @@
   <loadAfter>
     <li>brrainz.harmony</li>
     <li>Mehni.PickUpAndHaul</li>
+    <li>longwater.smartstockpilecreation</li>
   </loadAfter>
-  <description>[img]https://i.imgur.com/WAEzk68.png[/img]
-Update of sellophanes mod
-https://steamcommunity.com/sharedfiles/filedetails/?id=2015532615
+  <incompatibleWith>
+      <li>Mlie.StockpileStackLimit</li>
+      <li>ryder.SatisfiedStorage</li>
+      <li>Cozarkian.VarietyMatters.Stockpile</li>
+      <li>ubergarm.kanbanstockpile</li>
+  </incompatibleWith>
+  <description>
+Updated from https://steamcommunity.com/sharedfiles/filedetails/?id=2274678322
 
-- Added LoadAfter-tag for the Pickup and Haul mod
+Rearranged user interface for greater convenience. Optimized logic. Additional mod compatibility.
 
-[img]https://i.imgur.com/7Gzt3Rg.png[/img]
+# Features
+1. Set an upper limit for each tile in this stockpile. The limit is strictly in effect for pawns. Pawns will not haul items exceeding the upper limit.
 
-[table]
-    [tr]
-        [td][url=https://invite.gg/Mlie][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td]
-        [td][url=https://github.com/emipa606/StockpileStackLimit][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
-    [/tr]
-[/table]
-	
-[img]https://i.imgur.com/NOW7jU1.png[/img]
-This is the second iteration of the original mod by ilyaki, modified for better functionality by Darkside, and now updated for 1.1 by myself.
+2. Set the refill threshold of *each tile* in this stockpile. This can be considered as the lower limit. The refill percentage is calculated on upper limit.
 
-Majority of the credit can go to those two individuals, I just corrected dependencies, and made the necessary .NET updates.
+3. Temporarily disable refilling for all tiles in this stockpile. It is just a handy functionality, not a part of storage settings.
 
-This hasn&apos;t been extensively tested however, it ran with no hiccups in my modded 1.1 so I don&apos;t foresee too many issues occurring. The only caveat to that is while this will work along side LWM&apos;s DeepStorage you should not set stockpile limits for the buildings from that mod.
+- Non-game-changing: Will not change the mechanics of the original game.
 
-[strike]Additionally, I have not, and will not, test this for 1.0. In theory it should still work but if it doesn&apos;t please just use the 1.0 version that is linked below.[/strike]
+- Helper mod: Helps you controlling when and how to refill storages.
 
-The below links point to Darkside&apos;s modified version, and the original version of the mod to provide credit where it&apos;s due.
+# Compatibility/Mod Interaction
+Pick Up and Haul: works great with PUAH v1.1.1. May be incompatible with its next version. Who knows...
 
-Darkside&apos;s
-https://steamcommunity.com/sharedfiles/filedetails/?id=1852323982
+Quick Stockpile Creation: Add a "Create buffer stockpile" Gizmo to let the created stockpile refilled when empty.
 
-Original
-https://steamcommunity.com/sharedfiles/filedetails/?id=1651076103
+KV RimFridge: OK
 
-[img]https://i.imgur.com/Rs6T6cr.png[/img]
-[list]
-[*] See if the the error persists if you just have this mod and its requirements active.
-[*] If not, try adding your other mods until it happens again.
-[*] Post your error-log using [url=https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib[/url] and command Ctrl+F12
-[*] For best support, please use the Discord-channel for error-reporting.
-[*] Do not report errors by making a discussion-thread, I get no notification of that.
-[*] If you have the solution for a problem, please post it to the GitHub repository.
-[/list]
-</description>
+LWM's Deep Storage: It works somehow, but I really don't know why...
+
+Jobs of Opportunity: unknown
+
+Ogre Stack: unknown
+
+Infinite Storage: unknown
+
+Simple Storage: unknown
+
+Project Rim Factory: unknown
+
+# Links
+- https://github.com/waingt/StockpileStackLimitRemade
+- https://steamcommunity.com/sharedfiles/filedetails/?id=1852323982
+
+# Credits
+- https://steamcommunity.com/sharedfiles/filedetails/?id=1651076103
+- https://steamcommunity.com/sharedfiles/filedetails/?id=2274678322
+- https://steamcommunity.com/sharedfiles/filedetails/?id=2266068546
+  </description>
 </ModMetaData>
 

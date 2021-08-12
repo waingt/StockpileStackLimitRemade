@@ -9,7 +9,7 @@ namespace StockpileStackLimit
     {
         static void Postfix(Thing t, ref bool __result)
         {
-            __result = !t.IsForbidden(Faction.OfPlayer) && t.GetSlotGroup() != null && t.stackCount != Limits.CalculateStackLimit(t);
+            __result = !t.IsForbidden(Faction.OfPlayer) && t.GetSlotGroup() != null && t.stackCount != AdditionalStorageSettings.CalculateStackLimit(t);
         }
     }
 }
