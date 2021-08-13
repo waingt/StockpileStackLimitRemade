@@ -6,7 +6,7 @@ using System.Reflection;
 using Verse;
 using Verse.AI;
 
-namespace StockpileStackLimit
+namespace StockpileLimit
 {
     [HarmonyPatch]
     public static class PlaceHauledThingInCellPatch

@@ -2,7 +2,7 @@
 using RimWorld;
 using Verse;
 
-namespace StockpileStackLimit
+namespace StockpileLimit
 {
     [HarmonyPatch(typeof(StoreUtility), nameof(StoreUtility.TryFindBestBetterStoreCellFor))]
     internal class FindBestBetterStoreCellPatcher

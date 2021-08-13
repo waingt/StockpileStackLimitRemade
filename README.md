@@ -22,7 +22,7 @@ KV RimFridge: OK
 
 LWM's Deep Storage: It works somehow, but I really don't know why...
 
-Jobs of Opportunity: unknown
+Jobs of Opportunity: OK
 
 Ogre Stack: unknown
 
@@ -35,6 +35,10 @@ Project Rim Factory: unknown
 # Links
 - https://github.com/waingt/StockpileStackLimitRemade
 - https://steamcommunity.com/sharedfiles/filedetails/?id=1852323982
+
+# Bug Report
+- Post your error-log using https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib and press Ctrl+F12
+- It's recommended to use Github issues for error-reporting.
 
 # Credits
 - https://steamcommunity.com/sharedfiles/filedetails/?id=1651076103

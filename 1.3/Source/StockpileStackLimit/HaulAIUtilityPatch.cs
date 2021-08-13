@@ -4,7 +4,7 @@ using UnityEngine;
 using Verse;
 using Verse.AI;
 
-namespace StockpileStackLimit
+namespace StockpileLimit
 {
     [HarmonyPatch(typeof(HaulAIUtility), nameof(HaulAIUtility.HaulToCellStorageJob))]
     public static class HaulToCellStorageJobPatch

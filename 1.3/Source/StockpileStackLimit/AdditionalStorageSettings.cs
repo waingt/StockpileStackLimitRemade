@@ -4,7 +4,7 @@ using HarmonyLib;
 using RimWorld;
 using Verse;
 
-namespace StockpileStackLimit
+namespace StockpileLimit
 {
     [HarmonyPatch(typeof(StorageSettings), nameof(StorageSettings.ExposeData))]
     public static class AdditionalStorageSettings

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Reflection;
 using Verse;
 
-namespace StockpileStackLimit
+namespace StockpileLimit
 {
     [HarmonyPatch]
     class JobDriver_HaulToInventory_MakeNewToilsPatch

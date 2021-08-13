@@ -9,7 +9,7 @@ using Verse;
 using RimWorld;
 using HarmonyLib;
 
-namespace StockpileStackLimit
+namespace StockpileLimit
 {
     [HarmonyPatch(typeof(Thing), nameof(Thing.GetGizmos))]
     public static class Thing_GetGizmosPatch

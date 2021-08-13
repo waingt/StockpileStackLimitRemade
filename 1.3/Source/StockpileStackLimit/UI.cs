@@ -5,7 +5,7 @@ using RimWorld;
 using UnityEngine;
 using Verse;
 
-namespace StockpileStackLimit
+namespace StockpileLimit
 {
     [HarmonyPatch(typeof(ThingFilterUI), "DoThingFilterConfigWindow")]
     public class ThingFilterUIWindowPatch

@@ -2,7 +2,7 @@
 using RimWorld;
 using Verse;
 
-namespace StockpileStackLimit
+namespace StockpileLimit
 {
     [HarmonyPatch(typeof(ListerMergeables), "ShouldBeMergeable")]
     public class ShouldBeMergeablePatch
