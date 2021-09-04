@@ -16,8 +16,7 @@ namespace StockpileLimit
         public static bool Prefix(ref Job __result, Pawn pawn, Thing thing)
         {
             __result = null;
-            ISlotGroupParent hopperSgp = thing as ISlotGroupParent;
-            if (hopperSgp == null) return false;
+            if (!(thing is ISlotGroupParent hopperSgp)) return false;
 
             var setting = hopperSgp.GetStoreSettings();
             var limit = setting.GetStacklimit();

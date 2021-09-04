@@ -6,7 +6,7 @@ using System.Reflection;
 using RimWorld;
 using UnityEngine;
 using Verse;
-[assembly: AssemblyVersion("1.3.2")]
+[assembly: AssemblyVersion("1.3.3.*")]
 namespace StockpileLimit
 {
     public class StockpileStackLimitMod : Mod

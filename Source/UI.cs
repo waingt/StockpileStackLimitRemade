@@ -61,10 +61,9 @@ namespace StockpileLimit
             var limit = settings.GetStacklimit();
 
             Rect drawArea = new Rect(rect.xMin, rect.yMin - 48f - 3f - 90f, rect.width, 24f);
-            Rect labelArea, buttonArea, inputArea;
-            drawArea.SplitVertically(70f, out labelArea, out drawArea, 5f);
-            drawArea.SplitVertically(100f, out buttonArea, out drawArea, 5f);
-            inputArea = drawArea.LeftPartPixels(50f);
+            drawArea.SplitVertically(70f, out Rect labelArea, out drawArea, 5f);
+            drawArea.SplitVertically(100f, out Rect buttonArea, out drawArea, 5f);
+            Rect inputArea = drawArea.LeftPartPixels(50f);
             Widgets.Label(labelArea, "Set limit");
             TooltipHandler.TipRegion(labelArea, "Set an upper limit for each tile in this stockpile. The limit is strictly in effect for pawns. Pawns will not haul items exceeding the upper limit.");
             if (limittooltip.ContainsKey(limit)) TooltipHandler.TipRegion(buttonArea, limittooltip[limit]);

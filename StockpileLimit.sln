@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31521.260
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockpileLimit", "StockpileStackLimit\StockpileLimit.csproj", "{4F4A5502-A451-447B-B30B-2095CF304224}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockpileLimit", "Source\StockpileLimit.csproj", "{4F4A5502-A451-447B-B30B-2095CF304224}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {9C70A186-10F3-4DFD-8F54-6BDCA5116E94}
+		SolutionGuid = {6AB89B69-63F6-4E83-9721-9415C3A11D74}
 	EndGlobalSection
 EndGlobal
