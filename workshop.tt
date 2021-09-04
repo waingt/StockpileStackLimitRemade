@@ -1,0 +1,11 @@
+<#@ output extension=".vdf" #><#@ import namespace="System.Text.RegularExpressions" #><#@ import namespace="System.IO" #>"workshopitem"
+{
+ "appid" "294100"
+ "publishedfileid" "<#@ include file="About\PublishedFileId.txt" #>"
+ "contentfolder" "<#= Path.GetFullPath(".").Replace(@"\",@"\\") #>"
+ "previewfile" "<#= Path.GetFullPath(@".\About\Preview.png").Replace(@"\",@"\\") #>"
+ "visibility" "0"
+ "title" "Stockpile Limit"
+ "description" "<#= Regex.Replace(Regex.Replace(File.ReadAllText("README.md").Replace("\r","").Replace(@"\",@"\\").Replace(@"""","*"),@"#\s*(.*)\n","[h1]$1[/h1]\n"),@"\[([^\]]+)\]\(([^)]+)\)",@"[url=$2]$1[/url]") #>"
+ "changenote" "Version <#@ include file="About\version.txt" #>"
+}

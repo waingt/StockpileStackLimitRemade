@@ -29,7 +29,7 @@
   <description>
 Updated from https://steamcommunity.com/sharedfiles/filedetails/?id=2274678322
 
-Rearranged user interface for greater convenience. Optimized logic. Additional mod compatibility.
+Rearranged user interface for greater convenience. Optimized logic. Additional mod compatibility. No performance issues.
 
 # Features
 1. Set an upper limit for each tile in this stockpile. The limit is strictly in effect for pawns. Pawns will not haul items exceeding the upper limit.
@@ -49,24 +49,31 @@ Quick Stockpile Creation: Add a "Create buffer stockpile" Gizmo to let the creat
 
 KV RimFridge: OK
 
-LWM's Deep Storage: It works somehow, but I really don't know why...
+LWM's Deep Storage: OK
 
 Jobs of Opportunity: OK
 
-Ogre Stack: unknown
+Ogre Stack: OK
 
 Infinite Storage: unknown
 
 Simple Storage: unknown
 
-Project Rim Factory: unknown
+Project Rim Factory: OK, but not fully tested
+
+# Similar mods
+- KanbanStockpile: https://steamcommunity.com/sharedfiles/filedetails/?id=2287142613
+
+- SatisfiedStorage: https://steamcommunity.com/sharedfiles/filedetails/?id=2003354028
+
+- Variety Matters Stockpile: https://steamcommunity.com/sharedfiles/filedetails/?id=2266068546 (not yet been updated to 1.3)
 
 # Links
 - https://github.com/waingt/StockpileStackLimitRemade
 - https://steamcommunity.com/sharedfiles/filedetails/?id=1852323982
 
 # Bug Report
-- Post your error-log using https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib and press Ctrl+F12
+- Post your error-log using [HugsLib](https://steamcommunity.com/workshop/filedetails/?id=818773962) and press Ctrl+F12
 - It's recommended to use Github issues for error-reporting.
 
 # Credits
@@ -75,4 +82,3 @@ Project Rim Factory: unknown
 - https://steamcommunity.com/sharedfiles/filedetails/?id=2266068546
   </description>
 </ModMetaData>
-

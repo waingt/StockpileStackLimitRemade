@@ -1,0 +1,33 @@
+<#@ output extension=".xml" #>
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Stockpile Limit</name>
+  <packageId>darkside.StockpileLimit</packageId>
+  <author>darkside</author>
+  <url>https://github.com/waingt/StockpileStackLimitRemade</url>
+  <supportedVersions>
+    <li>1.3</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+    <li>Mehni.PickUpAndHaul</li>
+    <li>longwater.smartstockpilecreation</li>
+  </loadAfter>
+  <incompatibleWith>
+      <li>Mlie.StockpileStackLimit</li>
+      <li>ryder.SatisfiedStorage</li>
+      <li>Cozarkian.VarietyMatters.Stockpile</li>
+      <li>ubergarm.kanbanstockpile</li>
+  </incompatibleWith>
+  <description>
+<#@ include file="..\README.md" #>
+  </description>
+</ModMetaData>

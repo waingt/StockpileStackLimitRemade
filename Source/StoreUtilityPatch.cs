@@ -18,13 +18,21 @@ namespace StockpileLimit
     [HarmonyPatch(typeof(StoreUtility), "NoStorageBlockersIn")]
     public static class NoStorageBlockersInPatch
     {
-        public static bool Postfix(bool _, IntVec3 c, Map map, Thing thing)
+        public static bool Postfix(bool result, IntVec3 c, Map map, Thing thing)
         {
-            var setting = c.GetSlotGroup(map).Settings;
+            if (result == false) return result;
+            var slotgroup = c.GetSlotGroup(map);
+            if (slotgroup == null) return result;
+            var setting = slotgroup.Settings;
             var limit = setting.GetStacklimit();
+            var refillpercent = setting.GetRefillPercent();
             if (setting.IsRefillingDisabled() || limit == 0) return false;
-            if (limit < 0) limit = thing.def.stackLimit;
-            limit = limit * setting.GetRefillPercent();
+            if (limit < 0)
+            {
+                if (refillpercent == 100) return result;
+                limit = thing.def.stackLimit;
+            }
+            limit *= refillpercent;
             foreach (var thing2 in map.thingGrid.ThingsListAt(c))
             {
                 if (thing2.def.EverStorable(false))
